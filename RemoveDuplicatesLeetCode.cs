@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics.Metrics;
-using System.Reflection.Metadata.Ecma335;
+﻿using System.Linq.Expressions;
 
 namespace LeetCode
 {
@@ -150,75 +148,65 @@ namespace LeetCode
 
         }
 
-        public static int[] SearchRange1(int[] nums, int target)
+        public static int[] SearchRange2(int[] nums, int target)
         {
-            int[] result = { -1, -1 };
-
-            result[0] = FindFirstOccurrence(nums, target);
-
-            if (result[0] != -1)
-            {
-                result[1] = FindLastOccurrence(nums, target);
-            }
-
+            int[] result = new int[] { -1, -1};
+            result[0] = FindFirstOccurance(nums, target);
+            if (result[0]!= -1)
+                result[1] = FindSecondOccurance(nums, target);
             return result;
         }
 
-        private static int FindFirstOccurrence(int[] nums, int target)
+        private static int FindFirstOccurance(int[] nums, int target)
         {
-            int left = 0;
-            int right = nums.Length - 1;
+            int firstIndex = 0;
+            int lastIndex = nums.Length - 1;
             int result = -1;
-
-            while (left <= right)
+            
+            while(firstIndex <= lastIndex)
             {
-                int mid = left + (right - left) / 2;
-
+                int mid = (firstIndex + lastIndex) / 2;
                 if (nums[mid] == target)
                 {
                     result = mid;
-                    right = mid - 1; // Continue searching in the left half for the first occurrence
+                    lastIndex = mid - 1;
                 }
                 else if (nums[mid] < target)
                 {
-                    left = mid + 1;
+                    firstIndex = mid + 1;
                 }
                 else
                 {
-                    right = mid - 1;
+                    lastIndex = mid - 1;
                 }
             }
-
             return result;
         }
 
-        public static int FindLastOccurrence(int[] nums, int target)
+        private static int FindSecondOccurance(int[] nums, int target)
         {
-            int left = 0;
-            int right = nums.Length - 1;
+            int firstIndex = 0;
+            int lastIndex = nums.Length - 1;
             int result = -1;
-
-            while (left <= right)
+            
+            while (firstIndex <= lastIndex)
             {
-                int mid = left + (right - left) / 2;
-
+                int mid = (firstIndex + lastIndex) / 2;
                 if (nums[mid] == target)
                 {
                     result = mid;
-                    left = mid + 1; // Continue searching in the right half for the last occurrence
+                    firstIndex = mid + 1;
                 }
                 else if (nums[mid] < target)
                 {
-                    left = mid + 1;
+                    firstIndex = mid + 1;
                 }
                 else
                 {
-                    right = mid - 1;
+                    lastIndex = mid - 1;
                 }
             }
-
             return result;
         }
-
     }
 }

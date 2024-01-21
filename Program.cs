@@ -41,7 +41,7 @@
             //    Console.WriteLine("null response");
             //}
             //bool output = RemoveDuplicatesLeetCode.IsPalindrome(10001);
-            int[] output = RemoveDuplicatesLeetCode.SearchRange1(nums,3);
+            int[] output = RemoveDuplicatesLeetCode.SearchRange2(nums,3);
             foreach( int i in output )
             {
                 Console.WriteLine(i);
