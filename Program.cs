@@ -41,11 +41,17 @@
             //    Console.WriteLine("null response");
             //}
             //bool output = RemoveDuplicatesLeetCode.IsPalindrome(10001);
-            int[] output = RemoveDuplicatesLeetCode.SearchRange2(nums,3);
-            foreach( int i in output )
-            {
-                Console.WriteLine(i);
-            }
+            //int[] output = RemoveDuplicatesLeetCode.SearchRange2(nums,3);
+            //foreach( int i in output )
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            string haystack = "mississippi";
+            string needle = "issipi";
+
+            int outputVal = StringProblems.StrStr(haystack, needle);
+            Console.WriteLine(outputVal);
             //Console.WriteLine(output);
             //LinkedListNode node = LinkedListProblems.RemoveDuplicates(linkedList1.head);
             //LinkedList.PrintList(node);
