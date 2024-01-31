@@ -62,7 +62,11 @@
             new int[] {7, 8, 9},
             new int[] {12, 15, 19}
             };
-            int output1 = BinarySearchProblems.FindPeakElement(nums);
+
+            int target = 2;
+
+            int[] values = new int[] { -1, 1, 2, 3, 1 };
+            int output1 = BinarySearchProblems.CountPairs(values, target);
             Console.WriteLine(output1);
         }
     }
