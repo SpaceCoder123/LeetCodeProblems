@@ -63,11 +63,14 @@
             new int[] {12, 15, 19}
             };
 
-            int target = 2;
 
-            int[] values = new int[] { -1, 1, 2, 3, 1 };
-            int output1 = BinarySearchProblems.CountPairs(values, target);
-            Console.WriteLine(output1);
+            int[] values = new int[] { 155, 185, 150 };
+            string[] values1 = new string[] { "Alice", "Bob", "Bob" };
+            string[] output1 = SortingProblems.SortPeople( values1, values);
+            foreach (string i in output1)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
