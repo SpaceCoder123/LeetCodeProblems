@@ -64,13 +64,16 @@
             };
 
 
-            int[] values = new int[] { 155, 185, 150 };
+            int[] values = new int[] { 1, 6, 7, 5, 2, 4, 10, 6, 4 };
             string[] values1 = new string[] { "Alice", "Bob", "Bob" };
-            string[] output1 = SortingProblems.SortPeople( values1, values);
-            foreach (string i in output1)
+            //string[] output1 = SortingProblems.SortPeople( values1, values);
+
+            List<int> outputVal = (List<int>)SortingProblems.TargetIndices(values, 6);
+            foreach (int i in outputVal)
             {
                 Console.WriteLine(i);
             }
+
         }
     }
 }
