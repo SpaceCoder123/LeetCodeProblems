@@ -64,15 +64,18 @@
             };
 
 
-            int[] values = new int[] { 1, 6, 7, 5, 2, 4, 10, 6, 4 };
-            string[] values1 = new string[] { "Alice", "Bob", "Bob" };
-            //string[] output1 = SortingProblems.SortPeople( values1, values);
+            int[] values = new int[]{ 2, 4, 9, 3 };
+            //string[] values1 = new string[] { "Alice", "Bob", "Bob" };
+            ////string[] output1 = SortingProblems.SortPeople( values1, values);
 
-            List<int> outputVal = (List<int>)SortingProblems.TargetIndices(values, 6);
-            foreach (int i in outputVal)
-            {
-                Console.WriteLine(i);
-            }
+            //int[] outputVal = SlidingWindow.Decrypt(values, -2);
+            //foreach (int i in outputVal)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            string sentence = "MuFoevIXCZzrpXeRmTssj lYSW U jM";
+            bool Val = SlidingWindow.IsCircularSentence(sentence);
+            Console.WriteLine(Val);
 
         }
     }
