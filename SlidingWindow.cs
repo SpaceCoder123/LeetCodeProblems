@@ -1,4 +1,7 @@
-﻿namespace LeetCode
+﻿using System.Drawing;
+using System;
+
+namespace LeetCode
 {
     public class SlidingWindow
     {
@@ -80,13 +83,13 @@
                     {
                         break;
                     }
-                        if (i == n - 1)
+                    if (i == n - 1)
                     {
                         flag = WordChecker(firstCharacter, wordList.LastOrDefault().LastOrDefault()) ? true : false;
                     }
                     else
                     {
-                        flag = WordChecker(wordList[i].LastOrDefault(), wordList[i+1].FirstOrDefault()) ? true : false;
+                        flag = WordChecker(wordList[i].LastOrDefault(), wordList[i + 1].FirstOrDefault()) ? true : false;
                     }
                 }
             }
@@ -96,6 +99,35 @@
         private static bool WordChecker(char a, char b)
         {
             return a == b;
+        }
+
+        //1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
+        public static int NumOfSubarrays(int[] arr, int k, int threshold)
+        {
+            int firstPointer = 0;
+            int secondPointer = k-1;
+            int count = 0;
+            while (secondPointer != arr.Length)
+            {
+                count += CheckAverage(arr, k, threshold, firstPointer, secondPointer);
+                secondPointer++;
+                firstPointer++;
+            }
+            return count;
+
+        }
+
+        public static int CheckAverage(int[] arr, int k, int threshold, int firstPointer, int secondPointer)
+        {
+            int count = 0;
+            while (firstPointer <= secondPointer)
+            {
+                count += arr[firstPointer];
+                firstPointer++;
+            }
+            double sum = count / k; ;
+            if (sum >= threshold) return 1;
+            return 0;
         }
     }
 }

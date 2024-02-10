@@ -64,7 +64,7 @@
             };
 
 
-            int[] values = new int[]{ 2, 4, 9, 3 };
+            int[] values = new int[]{ 11, 13, 17, 23, 29, 31, 7, 5, 2, 3 };
             //string[] values1 = new string[] { "Alice", "Bob", "Bob" };
             ////string[] output1 = SortingProblems.SortPeople( values1, values);
 
@@ -74,7 +74,7 @@
             //    Console.WriteLine(i);
             //}
             string sentence = "MuFoevIXCZzrpXeRmTssj lYSW U jM";
-            bool Val = SlidingWindow.IsCircularSentence(sentence);
+            int Val = SlidingWindow.NumOfSubarrays(values,3,5);
             Console.WriteLine(Val);
 
         }
