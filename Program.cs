@@ -75,7 +75,13 @@
             //}
             string sentence = "MuFoevIXCZzrpXeRmTssj lYSW U jM";
             int Val = SlidingWindow.NumOfSubarrays(values,3,5);
-            Console.WriteLine(Val);
+            //Console.WriteLine(Val);
+
+            string input = "(()())(())(()(()))";
+            // output ()()()()(())
+
+            string output = StackProblems.RemoveOuterParenthesesWOStack(input);
+            Console.WriteLine(output);
 
         }
     }

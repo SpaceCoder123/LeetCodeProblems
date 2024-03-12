@@ -11,4 +11,10 @@
             Next = null;
         }
     }
+    public class TreeNode
+    {
+        public int Data;
+        public TreeNode Left;
+        public TreeNode Right;
+    }
 }

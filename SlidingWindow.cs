@@ -1,7 +1,4 @@
-﻿using System.Drawing;
-using System;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class SlidingWindow
     {
