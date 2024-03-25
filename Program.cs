@@ -64,8 +64,9 @@
             };
 
 
-            int[] values = new int[]{ 11, 13, 17, 23, 29, 31, 7, 5, 2, 3 };
-            //string[] values1 = new string[] { "Alice", "Bob", "Bob" };
+            int[] values = new int[]{ 8, 4, 6, 2, 3 };
+            // 4,6,10,16,22,24,2,3,2,3
+            string[] values1 = new string[] { "d1/", "../", "../", "../" };
             ////string[] output1 = SortingProblems.SortPeople( values1, values);
 
             //int[] outputVal = SlidingWindow.Decrypt(values, -2);
@@ -80,9 +81,35 @@
             string input = "(()())(())(()(()))";
             // output ()()()()(())
 
-            string output = StackProblems.RemoveOuterParenthesesWOStack(input);
-            Console.WriteLine(output);
+            //string output = StackProblems.RemoveOuterParenthesesWOStack(input);
+            //Console.WriteLine(output);
 
+
+
+            int[] outputVal = StackProblems.FinalPrices(values);
+            //foreach (int i in outputVal)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
+            //int outputNum = StackProblems.MinOperations(values1);
+            //Console.WriteLine(outputNum);
+
+
+            MinStack minStack = new MinStack();
+            Console.WriteLine(minStack.GetMin());
+            minStack.Push(-2);
+            minStack.Push(0);
+            minStack.Push(-1);
+
+
+            Console.WriteLine(minStack.GetMin()); // Output: -2
+            Console.WriteLine(minStack.Top());    // Output: -1
+
+            minStack.Pop();
+
+            Console.WriteLine(minStack.GetMin());
         }
     }
 }
