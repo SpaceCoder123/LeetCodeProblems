@@ -97,19 +97,32 @@
             //Console.WriteLine(outputNum);
 
 
-            MinStack minStack = new MinStack();
-            Console.WriteLine(minStack.GetMin());
-            minStack.Push(-2);
-            minStack.Push(0);
-            minStack.Push(-1);
+            //MinStack minStack = new MinStack();
+            //Console.WriteLine(minStack.GetMin());
+            //minStack.Push(-2);
+            //minStack.Push(0);
+            //minStack.Push(-1);
 
 
-            Console.WriteLine(minStack.GetMin()); // Output: -2
-            Console.WriteLine(minStack.Top());    // Output: -1
+            //Console.WriteLine(minStack.GetMin()); // Output: -2
+            //Console.WriteLine(minStack.Top());    // Output: -1
 
-            minStack.Pop();
+            //minStack.Pop();
 
-            Console.WriteLine(minStack.GetMin());
+            //Console.WriteLine(minStack.GetMin());
+
+            string homepage = "leetcode.com";
+            BrowserHistory browser = new BrowserHistory(homepage);
+            browser.Visit("google.com");
+            browser.Visit("facebook.com");
+            browser.Visit("youtube.com");
+            Console.WriteLine(browser.Back(1));
+            Console.WriteLine(browser.Back(1));
+            Console.WriteLine(browser.Forward(1));
+            browser.Visit("linkedin.com");
+            Console.WriteLine(browser.Forward(2));
+            Console.WriteLine(browser.Back(2));
+            Console.WriteLine(browser.Back(7));
         }
     }
 }
