@@ -111,18 +111,23 @@
 
             //Console.WriteLine(minStack.GetMin());
 
-            string homepage = "leetcode.com";
-            BrowserHistory browser = new BrowserHistory(homepage);
-            browser.Visit("google.com");
-            browser.Visit("facebook.com");
-            browser.Visit("youtube.com");
-            Console.WriteLine(browser.Back(1));
-            Console.WriteLine(browser.Back(1));
-            Console.WriteLine(browser.Forward(1));
-            browser.Visit("linkedin.com");
-            Console.WriteLine(browser.Forward(2));
-            Console.WriteLine(browser.Back(2));
-            Console.WriteLine(browser.Back(7));
+            //string homepage = "leetcode.com";
+            //BrowserHistory browser = new BrowserHistory(homepage);
+            //browser.Visit("google.com");
+            //browser.Visit("facebook.com");
+            //browser.Visit("youtube.com");
+            //Console.WriteLine(browser.Back(1));
+            //Console.WriteLine(browser.Back(1));
+            //Console.WriteLine(browser.Forward(1));
+            //browser.Visit("linkedin.com");
+            //Console.WriteLine(browser.Forward(2));
+            //Console.WriteLine(browser.Back(2));
+            //Console.WriteLine(browser.Back(7));
+
+            //int value = Recursion.nthFibonacci(2);
+            long value = Recursion.nCrAlt(12, 13);
+            //long value = Recursion.Factorial(12);
+            Console.WriteLine(value);
         }
     }
 }

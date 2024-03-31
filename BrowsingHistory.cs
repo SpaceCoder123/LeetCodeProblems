@@ -19,7 +19,7 @@ namespace LeetCode
         }
 
         public string Back(int steps)
-        {
+        {   
             while (steps > 0 && current.Prev != null)
             {
                 current = current.Prev;
